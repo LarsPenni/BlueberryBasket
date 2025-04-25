@@ -484211,7 +484211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 93, y: -1.6981201}
+  m_AnchoredPosition: {x: 93.00003, y: -1.6981201}
   m_SizeDelta: {x: 464, y: 26.69812}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &4530223839740006413
@@ -485327,7 +485327,7 @@ MonoBehaviour:
   healthSlider: {fileID: 6670333591133026195}
   natureSlider: {fileID: 3293919132136126365}
   healthText: {fileID: 8021186323214796015}
-  timeText: {fileID: 5752545196092075856}
+  babyCountText: {fileID: 1601677177088044257}
   dieText: {fileID: 2431363872803909201}
   coinText: {fileID: 1277890030562514552}
   pauseScreen: {fileID: 2084465627}

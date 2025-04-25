@@ -9,11 +9,12 @@ public class Cage : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0)
+        if(health == 0)
         {
             GetComponent<SpriteRenderer>().sprite = openCage;
             BabyBehaviour babyBoy = baby.transform.GetComponent<BabyBehaviour>();
             babyBoy.StartFollowing();
+            GameManager.Instance.BabyEvent();
         }
     }
 }

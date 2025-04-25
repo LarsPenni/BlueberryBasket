@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour {
         GameManager.OnPlayerLifeChange += UpdateHealthBar;
         GameManager.OnLeafPickedUp += UpdateNatureBar;
         GameManager.GameOver += ShowEndScreen;
+        GameManager.PickedUpBaby += UpdateBabyCount;
     }
 
     private void OnDestroy()
@@ -23,6 +24,7 @@ public class UIController : MonoBehaviour {
         GameManager.OnCollectiblePickedUp -= UpdateCollectibleScore;
         GameManager.OnLeafPickedUp -= UpdateNatureBar;
         GameManager.GameOver -= ShowEndScreen;
+        GameManager.PickedUpBaby -= UpdateBabyCount;
     }
 
     public Image fadeScreen;
@@ -31,7 +33,7 @@ public class UIController : MonoBehaviour {
 
     public Slider healthSlider;
     public Slider natureSlider;
-    public TMP_Text healthText, timeText;
+    public TMP_Text healthText, babyCountText;
     public TMP_Text dieText;
     public TMP_Text coinText;
 
@@ -96,6 +98,11 @@ public class UIController : MonoBehaviour {
         {
             healthSlider.value = currentHealth;
         }
+    }
+
+    private void UpdateBabyCount()
+    {
+        babyCountText.text = GameManager.Instance.GetBabyCount().ToString();
     }
 
     private void UpdateNatureBar(int currentNature)

@@ -483571,7 +483571,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 62807491176457625, guid: ffa8e165a1ee9b647a64320dfd088e9a, type: 3}
       propertyPath: orthographic size
-      value: 1.0703125
+      value: 4.4296875
       objectReference: {fileID: 0}
     - target: {fileID: 624039581926319585, guid: ffa8e165a1ee9b647a64320dfd088e9a, type: 3}
       propertyPath: player

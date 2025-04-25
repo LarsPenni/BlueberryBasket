@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static event Action<int> OnLeafPickedUp;
     public static event Action OnCollectiblePickedUp;
     public static event Action GameOver;
+    public static event Action PickedUpBaby;
     private int currentCollectibles = 0;
     private int currentNatureValue = 0;
     private int neededNatureValue = 20;
@@ -85,5 +86,15 @@ public class GameManager : MonoBehaviour
     {
         babyCount++;
         return babyCount;
+    }
+
+    public int GetBabyCount()
+    {
+        return babyCount;
+    }
+
+    public void BabyEvent()
+    {
+        PickedUpBaby?.Invoke();
     }
 }
